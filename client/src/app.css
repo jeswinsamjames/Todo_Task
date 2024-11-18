@@ -1,0 +1,384 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(233, 241, 249);
+  display: flex;
+  justify-content: center;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+}
+
+.app {
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.05) 0 6px 24px, rgba(0, 0, 0, 0.08) 0 0 0 1px;
+  border-radius: 10px;
+  padding: 10px;
+  width: 800px;
+  margin-top: 50px;
+}
+
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: rgb(240, 248, 255);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px 10px 0 0;
+}
+
+.list-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: rgb(50, 50, 50);
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+}
+
+.button-container button {
+  margin: 0 5px;
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 10px;
+  background-color: transparent;
+}
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.button-container {
+  display: flex;
+  gap: 5px;
+}
+
+button.edit {
+  color: blue;
+}
+
+button.delete {
+  color: red;
+}
+.list-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.task-header {
+  cursor: pointer;
+  font-weight: bold;
+  background-color: #f4f4f4;
+  padding: 10px;
+}
+
+.subtask-list {
+  margin-left: 20px;
+  padding: 10px;
+  border-left: 2px solid #ccc;
+}
+
+.subtask-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+}
+
+.button-container {
+  display: flex;
+  gap: 5px;
+}
+.task-item,
+.subtask-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+.view-subtasks {
+  cursor: pointer;
+  color: #000000;
+
+  border: 1px solid #000000;
+}
+.back-button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  border-radius: 3px;
+  border: 1px solid #000000;
+}
+
+.back-button:hover {
+  background-color: #333333;
+}
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tabs button {
+  padding: 10px 20px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  background-color: #f4f4f4;
+}
+
+.tabs button.active {
+  background-color: #007bff;
+  color: white;
+  border: 1px solid #007bff;
+}
+
+.subtask-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 5px 0;
+}
+
+.subtask-item p {
+  margin: 0;
+}
+
+/* Create form */
+/* Overlay to darken the background */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Container for the form */
+.form-container {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 30px;
+  width: 400px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Form title with close button */
+.form-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.form-title h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+}
+
+/* Close button */
+.close-button {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #999;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.close-button:hover {
+  color: #333;
+}
+
+/* Input field styling */
+.input-field {
+  width: 100%;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.input-field:focus {
+  border: 1px solid #007bff;
+}
+
+/* Submit button styling */
+.submit-button {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 16px;
+  color: #fff;
+  background: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.submit-button:hover {
+  background: #0056b3;
+}
+
+.submit-button.create {
+  background: #28a745; /* Green for 'create' mode */
+}
+
+.submit-button.create:hover {
+  background: #218838;
+}
+
+/* Animation for the form */
+@keyframes fadeIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.subtask-title {
+  display: flex;
+
+  align-items: center;
+}
+.add-new-task {
+  display: flex;
+  margin: 0 5px;
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 10px;
+  background-color: transparent;
+  border: 1px solid #000000;
+}
+
+/* auth*/
+
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #3a6c98, #42a5f5);
+  font-family: Arial, sans-serif;
+}
+
+.auth-container-box {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.auth-container-box h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.auth-container-box input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+}
+
+.auth-container-box input:focus {
+  border-color: #1e88e5;
+  box-shadow: 0 0 4px rgba(30, 136, 229, 0.5);
+}
+
+.submit-btn {
+  background: #1e88e5;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
+  width: 100%;
+}
+
+.submit-btn:hover {
+  background: #1565c0;
+}
+
+.auth-options {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.auth-options button {
+  border: none;
+  padding: 8px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+  font-size: 14px;
+}
+
+.auth-options button:hover {
+  background: #e3f2fd;
+}
+
+.error-text {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px; /* Space between the buttons */
+}
+
+.export-button {
+  margin-left: auto; /* Push the export button to the far right */
+}
+.export-button:hover {
+  cursor: pointer;
+}
+.timestamp {
+  font-size: 0.8rem;
+  color: gray;
+  margin-top: 5px;
+}
