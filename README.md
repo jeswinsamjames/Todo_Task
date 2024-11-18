@@ -20,15 +20,16 @@ Before you begin, ensure you have the following installed on your system:
 
 Follow these steps to set up the application:
 
-### 1. Clone the Repository
+## 1. Clone the Repository
 
 Run the following command in your terminal to clone the repository:
 
 ```bash
 git clone https://github.com/jeswinsamjames/Todo_Task.git
 cd todo
-
+```
 ## 2. Install Dependencies
+```bash
 For Client:
 Navigate to the client directory and install dependencies:
 
@@ -40,12 +41,11 @@ For Server:
 Navigate to the server directory and install dependencies:
 cd ../server
 npm install
-
+```
 ## 3. Configure Environment Variables
+
 In the server directory, create a .env file and add the following environment variables:
-
-env
-
+```bash
 ORACLE_USER=user_name
 ORACLE_PASSWORD=yourpassword
 ORACLE_HOST=localhost
@@ -55,7 +55,7 @@ JWT_SECRET= key_jwt
 GIT_TOKEN = git_token_personal
 
 Replace the values with your actual database credentials. The PORT variable specifies the server port.
-
+```
 ## 4. Set Up the Oracle Database
 
 1.  **Install Oracle SQL Developer** from the official website.
@@ -67,16 +67,17 @@ Replace the values with your actual database credentials. The PORT variable spec
 
 1. Start the Server
 Navigate to the server directory and run the following command to start the Node.js server:
-
+```bash
 cd server
 nodemon server.js
 The server will start on the specified port .
-
+```
 2. Start the Client
 Navigate to the client directory and start the React application:
-
+```bash
 cd ../client
 npm start
+```
 The React app will start and be accessible at http://localhost:3000.
 
 3. Access the Application
