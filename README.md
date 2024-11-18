@@ -84,3 +84,7 @@ The React app will start and be accessible at http://localhost:3000.
 Once both the server and client are running:
 
 Open your browser and go to http://localhost:3000.
+
+
+![Screenshot (236)](https://github.com/user-attachments/assets/a2105b67-af80-47c5-864c-366467e78751)
+
